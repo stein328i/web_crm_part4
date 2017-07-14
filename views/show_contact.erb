@@ -1,0 +1,15 @@
+
+<ul>
+  <li>First Name = <%= @contact.first_name.capitalize %></li>
+  <li>Last Name = <%= @contact.last_name.capitalize %></li>
+  <li>Email = <%= @contact.email %></li>
+  <li>Note = <%= @contact.note %></li>
+</ul>
+
+
+<p><a href="/contacts/<%=@contact.id%>/edit">Edit</a></p>
+
+<form action='/contacts/<%= @contact.id %>' method='post'>
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' name='delete' value='Delete Contact'>
+</form>
